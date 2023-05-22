@@ -1,0 +1,36 @@
+// 3. Car Description Class.
+// Create a class called Car with three properties: company, model, and year. The class should have a method
+// called getDescription that returns a string in the format "This is a <year> <company> <model>". Instantiate an
+// instance of the Car class and call the getDescription method.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car{
+    constructor(company, model, year){
+        this.company = company;
+        this.model = model;
+        this.year = year;
+    }
+
+    getdescription(){
+        return `this is  a ${this.year} ${this.company} ${this.model}`
+    }
+}
+
+     const myCar = new Car('Tesla', 'Model 3', 2022);
+      console.log(myCar.getdescription());  
+    </script>
+</body>
+</html>
+
+
+
