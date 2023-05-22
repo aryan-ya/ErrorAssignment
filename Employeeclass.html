@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4. Employee Class Challenge.
+Create a class called Employee with three properties: name, position, and salary. The class should have a
+method called getSalary that returns the employee's salary. Instantiate an instance of the Employee class and
+call the getSalary method. -->
+    <script>
+    class Employee {
+  constructor(name, position, salary) {
+    this.name = name;
+    this.position = position;
+    this.salary = salary;
+  }
+
+  getSalary() {
+    return this.salary;
+  }
+}
+
+
+const emp = new Employee('John Doe', 'Manager', 50000);
+console.log(emp.getSalary());  
+
+
+
+
+    </script>
+</body>
+</html>
