@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2. Building Robust Functions in JavaScript
+Create a function called getPerson that takes an object as a parameter representing a person's name and age.
+The function should return the person's name and age as a string in the format "Name: <name>, Age: <age>".
+However, if the parameter is not a valid object with the properties "name" and "age", the function should throw
+an error with the message "Invalid parameter type". Use try-catch to handle this error and return the error
+message if it occurs. -->
+<script>
+   function getPerson(person){
+    try{
+        if(typeof person !== 'object' ||!person.hasOwnProperty('name') || !person.hasOwnProperty('age')) {
+            throw new Error('Invalid parameter type');
+        }
+        return 'Name: ' + person.name + ', Age: ' + person.age;
+    }catch (error) {
+    return error.message;
+    }
+   }
+   const person1 = { name: 'Arya yadav', age: 25 };
+console.log(getPerson(person1));  
+const person2 = { name: 'Aryan raj' };
+console.log(getPerson(person2));  
+
+const person3 = 'Arya';
+console.log(getPerson(person3));  
+
+</script>
+
+
+
+</body>
+</html>
+
